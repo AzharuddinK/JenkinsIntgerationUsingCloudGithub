@@ -30,7 +30,6 @@ jobs:
       run: java -jar D:\a\Browserstack_CDL_POC\Browserstack_CDL_POC\SendTeamsNotifications.jar
     - name: Get Latest Report Name
       run: |
-          java -jar GetLatestReport.jar
-          BUILD_NAME=$(echo "$output")
+          BUILD_NAME=java -jar GetLatestReport.jar
           echo "$BUILD_NAME"
 
