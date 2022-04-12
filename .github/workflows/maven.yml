@@ -51,5 +51,5 @@ jobs:
         owner: AzharuddinK
         repo: Browserstack_CDL_POC
         branch-name: master
-        remote-dir: https://github.com/AzharuddinK/Browserstack_CDL_POC/tree/master/ExtentReports/
+        remote-dir: ExtentReports
    
