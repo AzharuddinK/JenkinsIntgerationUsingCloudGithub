@@ -1,0 +1,14 @@
+pages\LoginPage.class
+tests\ReltioPOCTest.class
+pageObjects\QuoteInformationPageObjects.class
+tests\RunVBSFile.class
+pages\Pages$QUOTE_HEADER_BUTTON.class
+pageObjects\QuoteInformationPage.class
+pageObjects\Test.class
+tests\Manhattan_POC.class
+pages\AccountsPage.class
+pages\Pages.class
+pages\ManhattanLoginPage.class
+tests\TestBase.class
+pageObjects\QuoteInformation.class
+pages\ReltioProfilePage.class

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="20257" started-at="2022-04-12T09:28:18Z" finished-at="2022-04-12T09:28:38Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="20257" started-at="2022-04-12T09:28:18Z" finished-at="2022-04-12T09:28:38Z">
+      <class name="tests.ReltioPOCTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.ReltioPOCTest@5cb9f472]" name="setup" is-config="true" duration-ms="7420" started-at="2022-04-12T09:28:18Z" finished-at="2022-04-12T09:28:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:tests.ReltioPOCTest@5cb9f472]" name="setup" is-config="true" duration-ms="170" started-at="2022-04-12T09:28:25Z" finished-at="2022-04-12T09:28:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@62417a16]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="reltioPOC(java.util.Hashtable)[pri:1, instance:tests.ReltioPOCTest@5cb9f472]" name="reltioPOC" duration-ms="10035" started-at="2022-04-12T09:28:26Z" data-provider="ExcelDP1" finished-at="2022-04-12T09:28:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{MarketSegment=Automotive & E-Mobility, AcountName=Excel, CDLUser=SESA443020, SubMarketSegment=Automotive Manufacturers, bfoUser=autouatinsidesalesuser@bridge-fo.com.sitbfo21, Address=Bangalore Road,635126 hosur, bfoPassword=sakthiV@123, ClassificationLevel=IT Solution Provider, SelectAddress=Bangalore Road, CDLPassword=tEST@2021}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reltioPOC -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.ReltioPOCTest@5cb9f472]" name="tearDown" is-config="true" duration-ms="1973" started-at="2022-04-12T09:28:36Z" finished-at="2022-04-12T09:28:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="publishreport()[pri:0, instance:tests.ReltioPOCTest@5cb9f472]" name="publishreport" is-config="true" duration-ms="236" started-at="2022-04-12T09:28:38Z" finished-at="2022-04-12T09:28:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- publishreport -->
+      </class> <!-- tests.ReltioPOCTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
