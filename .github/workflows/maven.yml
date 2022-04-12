@@ -30,12 +30,11 @@ jobs:
       run: java -jar SendTeamsNotifications.jar
     - name: Get Latest Report Name
       run: java -jar GetLatestReport.jar
-    - name: Read json
-      id: package
-      with:
-        path: ./ExtentReports/TestReport.json
-        run: |
-          content=`cat ./ExtentReports/TestReport.json`
-          echo "::set-output name=packageJson::$content"
-          echo "${{fromJson(steps.set_var.outputs.packageJson).ReportName}}"
+    - name: get nested property
+      id: format_script
+      uses: notiz-dev/github-action-json-property@release
+      with: 
+        path: './ExtentReports/TestReport.json'
+        prop_path: 'ReportName'
+        run: echo ${{steps.format_script.outputs.prop}}
    
