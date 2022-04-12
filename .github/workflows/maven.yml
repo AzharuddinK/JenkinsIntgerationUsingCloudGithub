@@ -28,18 +28,14 @@ jobs:
       uses: scacap/action-surefire-report@v1
     - name: notifications to teams Channel
       run: java -jar SendTeamsNotifications.jar
-    - name: Get Latest Report Name
-      run: java -jar GetLatestReport.jar
-    - name: Read file contents
-      id: read_file
-      uses: andstor/file-reader-action@v1
+    - name: Read Properties
+      id: read_property
+      uses:  ashley-taylor/read-json-property-action@v1.0
       with:
-        path: "./ExtentReports/TestReport.json"
-    - name: Extract version from package.json
-      uses: sergeysova/jq-action@v2
-      id: version
-      with:
-        cmd: 'jq .ReportName ./ExtentReports/TestReport.json -r'
-    - name: Show my version
-      run: 'echo "version ${{ steps.version.outputs.value }}"'
+        path: ./ExtentReports/TestReport.json
+        property: ReportName
+    - name: echo artifact
+      run: | 
+        REPORT_NAME = ${{ steps.read_property.outputs.value }}
+        echo "$REPORT_NAME"
    
