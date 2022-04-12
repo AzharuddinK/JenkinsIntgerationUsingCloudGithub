@@ -33,7 +33,7 @@ public class ExtentManager {
 	   
 	if(extent==null)
 	{   
-		extent=new ExtentReports("target/surefire-reports/executionReports/"+filename,true);
+		extent=new ExtentReports("target/surefire-reports/"+filename,true);
 		extent.loadConfig(new File(System.getProperty("user.dir")+"//ReportsConfig.xml"));
 		//optional
 		//extent.addSystemInfo("Selenium",CONFIG.getProperty("SeleniumVersion"));
