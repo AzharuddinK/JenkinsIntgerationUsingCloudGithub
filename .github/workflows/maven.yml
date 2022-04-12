@@ -43,7 +43,7 @@ jobs:
           echo "$REPORT_NAME"
     - name: Setup node
       uses: actions/setup-node@v1
-    - name: Upload Extent report to GitHub
+    - name: Upload Extent report to GitHub Actions
       uses: LasyIsLazy/github-upload-action@v0.1.0
       with:
         access-token: ${{ secrets.ACCESS_TOKEN }}
