@@ -51,9 +51,5 @@ jobs:
         owner: AzharuddinK
         repo: Browserstack_CDL_POC
         branch-name: master
-<<<<<<< HEAD
-        remote-dir: ./ExtentReports/${{ steps.read_property.outputs.value }}
-=======
         remote-dir: ./Reports/
->>>>>>> bdcad56782fc8ca17c24e7a3d711f3a044b0212a
    
