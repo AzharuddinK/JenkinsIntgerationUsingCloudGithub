@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,6 +103,11 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="tests.ReltioPOCTest" hash-for-method="reltioPOC({MarketSegment=Automotive &amp; E-Mobility, AcountName=Excel, CDLUser=SESA443020, SubMarketSegment=Autom...)">reltioPOC({MarketSegment=Automotive & E-Mobility, AcountName=Excel, CDLUser=SESA443020, SubMarketSegment=Autom...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="tests.ReltioPOCTest" hash-for-method="reltioPOC1({MarketSegment=Automotive &amp; E-Mobility, AcountName=Excel, CDLUser=SESA443020, SubMarketSegment=Autom...)">reltioPOC1({MarketSegment=Automotive & E-Mobility, AcountName=Excel, CDLUser=SESA443020, SubMarketSegment=Autom...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -128,6 +133,14 @@
                   <a name="reltioPOC({MarketSegment=Automotive &amp; E-Mobility, AcountName=Excel, CDLUser=SESA443020, SubMarketSegment=Autom...)">
                   </a> <!-- reltioPOC({MarketSegment=Automotive & E-Mobility, AcountName=Excel, CDLUser=SESA443020, SubMarketSegment=Autom...) -->
                   <span class="method-name">reltioPOC</span>
+                  <span class="parameters">({MarketSegment=Automotive & E-Mobility, AcountName=Excel, CDLUser=SESA443020, SubMarketSegment=Automotive Manufacturers, bfoUser=autouatinsidesalesuser@bridge-fo.com.sitbfo21, Address=Bangalore Road,635126 hosur, bfoPassword=sakthiV@123, ClassificationLevel=IT Solution Provider, SelectAddress=Bangalore Road, CDLPassword=tEST@2021})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="reltioPOC1({MarketSegment=Automotive &amp; E-Mobility, AcountName=Excel, CDLUser=SESA443020, SubMarketSegment=Autom...)">
+                  </a> <!-- reltioPOC1({MarketSegment=Automotive & E-Mobility, AcountName=Excel, CDLUser=SESA443020, SubMarketSegment=Autom...) -->
+                  <span class="method-name">reltioPOC1</span>
                   <span class="parameters">({MarketSegment=Automotive & E-Mobility, AcountName=Excel, CDLUser=SESA443020, SubMarketSegment=Automotive Manufacturers, bfoUser=autouatinsidesalesuser@bridge-fo.com.sitbfo21, Address=Bangalore Road,635126 hosur, bfoPassword=sakthiV@123, ClassificationLevel=IT Solution Provider, SelectAddress=Bangalore Road, CDLPassword=tEST@2021})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -188,16 +201,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'reltioPOC')
 data.setCell(0, 2, 'tests.ReltioPOCTest')
-data.setCell(0, 3, 3171);
+data.setCell(0, 3, 6036);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'reltioPOC1')
+data.setCell(1, 2, 'tests.ReltioPOCTest')
+data.setCell(1, 3, 2182);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 seconds</span>
+              <span class="suite-total-time">Total running time: 8 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -229,20 +246,24 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
-                <span class="method-name">setup(org.testng.TestRunner@2a2da905)</span>
-                <span class="method-start">9801 ms</span>
+                <span class="method-name">setup(org.testng.TestRunner@5af28b27)</span>
+                <span class="method-start">12496 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">reltioPOC({MarketSegment=Automotive & E-Mobility, AcountName=Excel, CDLUser=SESA443020, SubMarketSegment=Autom...)</span>
-                <span class="method-start">12054 ms</span>
+                <span class="method-start">13468 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">reltioPOC1({MarketSegment=Automotive & E-Mobility, AcountName=Excel, CDLUser=SESA443020, SubMarketSegment=Autom...)</span>
+                <span class="method-start">19562 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">15228 ms</span>
+                <span class="method-start">21745 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-suite after">
                 <span class="method-name">publishreport</span>
-                <span class="method-start">17242 ms</span>
+                <span class="method-start">23211 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

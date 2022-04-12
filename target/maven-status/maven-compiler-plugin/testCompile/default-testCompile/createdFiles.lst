@@ -1,4 +1,5 @@
 pages\LoginPage.class
+tests\GetLatestReportPath.class
 tests\ReltioPOCTest.class
 pageObjects\QuoteInformationPageObjects.class
 tests\RunVBSFile.class
