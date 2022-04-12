@@ -37,8 +37,6 @@ jobs:
         path: "./ExtentReports/TestReport.json"
     - name: File contents
       run: |
-          echo "${ steps.read_file.outputs.contents.ReportName}"
-          echo "reading a json file"
-          BUILD_NAME=$(echo "$output" | jq -r '.ReportName')
-          echo "$BUILD_NAME" 
+           BUILD_NAME = echo "${ steps.read_file.outputs.contents.ReportName}"
+           echo "$BUILD_NAME" 
    
