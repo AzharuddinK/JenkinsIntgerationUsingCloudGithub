@@ -2,27 +2,27 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14930" started-at="2022-04-12T06:59:13Z" finished-at="2022-04-12T06:59:28Z">
+  <suite name="Suite" duration-ms="17190" started-at="2022-04-12T08:42:22Z" finished-at="2022-04-12T08:42:39Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="14930" started-at="2022-04-12T06:59:13Z" finished-at="2022-04-12T06:59:28Z">
+    <test name="Test" duration-ms="17190" started-at="2022-04-12T08:42:22Z" finished-at="2022-04-12T08:42:39Z">
       <class name="tests.ReltioPOCTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.ReltioPOCTest@f4468b]" name="setup" is-config="true" duration-ms="7793" started-at="2022-04-12T12:29:13Z" finished-at="2022-04-12T12:29:21Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.ReltioPOCTest@36d4b5c]" name="setup" is-config="true" duration-ms="9796" started-at="2022-04-12T14:12:22Z" finished-at="2022-04-12T14:12:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:tests.ReltioPOCTest@f4468b]" name="setup" is-config="true" duration-ms="853" started-at="2022-04-12T12:29:21Z" finished-at="2022-04-12T12:29:22Z">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:tests.ReltioPOCTest@36d4b5c]" name="setup" is-config="true" duration-ms="776" started-at="2022-04-12T14:12:32Z" finished-at="2022-04-12T14:12:32Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@10174f2]]>
+                <![CDATA[org.testng.TestRunner@2a2da905]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="reltioPOC(java.util.Hashtable)[pri:1, instance:tests.ReltioPOCTest@f4468b]" name="reltioPOC" duration-ms="2647" started-at="2022-04-12T12:29:24Z" data-provider="ExcelDP1" finished-at="2022-04-12T12:29:27Z">
+        <test-method status="PASS" signature="reltioPOC(java.util.Hashtable)[pri:1, instance:tests.ReltioPOCTest@36d4b5c]" name="reltioPOC" duration-ms="3171" started-at="2022-04-12T14:12:34Z" data-provider="ExcelDP1" finished-at="2022-04-12T14:12:37Z">
           <params>
             <param index="0">
               <value>
@@ -33,15 +33,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reltioPOC -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.ReltioPOCTest@f4468b]" name="tearDown" is-config="true" duration-ms="1576" started-at="2022-04-12T12:29:27Z" finished-at="2022-04-12T12:29:28Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.ReltioPOCTest@36d4b5c]" name="tearDown" is-config="true" duration-ms="1958" started-at="2022-04-12T14:12:37Z" finished-at="2022-04-12T14:12:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="publishreport()[pri:0, instance:tests.ReltioPOCTest@f4468b]" name="publishreport" is-config="true" duration-ms="415" started-at="2022-04-12T12:29:28Z" finished-at="2022-04-12T12:29:29Z">
+        <test-method status="PASS" signature="publishreport()[pri:0, instance:tests.ReltioPOCTest@36d4b5c]" name="publishreport" is-config="true" duration-ms="377" started-at="2022-04-12T14:12:39Z" finished-at="2022-04-12T14:12:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- publishreport -->
       </class> <!-- tests.ReltioPOCTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
