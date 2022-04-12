@@ -41,4 +41,14 @@ jobs:
           REPORT_NAME: ${{ steps.read_property.outputs.value }}
       run: | 
           echo "$REPORT_NAME"
+    - name: Setup node
+      uses: actions/setup-node@v1
+    - name: Upload to GitHub
+      uses: LasyIsLazy/github-upload-action@v0.1.0
+      with:
+        access-token: ${{ secrets.ACCESS_TOKEN }}
+        file-path: ${{ steps.read_property.outputs.value }}
+        owner: AzharuddinK
+        repo: Browserstack_CDL_POC
+        remote-dir: https://github.com/AzharuddinK/Browserstack_CDL_POC.git/ExtentReports/
    
