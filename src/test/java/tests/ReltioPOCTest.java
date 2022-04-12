@@ -50,6 +50,7 @@ public class ReltioPOCTest extends TestBase {
 		ExtentTestManager.getTest().log(LogStatus.INFO, "Statement 1");
 		ExtentTestManager.getTest().log(LogStatus.INFO, "Statement 1");
 		ExtentTestManager.getTest().log(LogStatus.INFO, "Statement 1");
+		ExtentTestManager.getTest().log(LogStatus.INFO, "Statement 1");
 		/*page.loginPage().LogintoApplication(data.get("bfoUser"), data.get("bfoPassword"));
 		page.AccountsPage().createAccount(data.get("AcountName"), data.get("Address"), data.get("SelectAddress"),
 				data.get("ClassificationLevel"), data.get("MarketSegment"), data.get("SubMarketSegment"));
