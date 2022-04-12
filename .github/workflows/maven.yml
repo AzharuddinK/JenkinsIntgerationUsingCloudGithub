@@ -32,8 +32,10 @@ jobs:
       run: java -jar GetLatestReport.jar
     - name: Read json
       id: package
-      uses: juliangruber/read-file-action@v1
       with:
         path: ./ExtentReports/TestReport.json
-        run: echo "${{ steps.package.outputs.ReportName}}"
+        run: |
+          content=`cat ./ExtentReports/TestReport.json`
+          echo "::set-output name=packageJson::$content"
+          echo "${{fromJson(steps.set_var.outputs.packageJson).ReportName}}"
    
