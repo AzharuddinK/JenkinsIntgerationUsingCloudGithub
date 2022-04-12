@@ -1,42 +1,54 @@
-name: Java CI with Maven
+# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
+# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
+
+name: Runnig Tests
 on:
   push:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+
 jobs:
-  compile:
-    runs-on: ubuntu-latest
-    name: Running Java ${{ matrix.java }} compile
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Compile code
-      run: mvn compile
-  test:
-    runs-on: ubuntu-latest
-    name: Running tests
-    needs: compile
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set up JDK 1.8
-        uses: actions/setup-java@v1
-        with:
-          java-version: 1.8
-      - name: Run unit tests
-        run: mvn test 
   build:
-    runs-on: ubuntu-latest
-    name: Run mvn build and generate coverage report
-    needs: test
+
+    runs-on: windows-latest
+
     steps:
-      - uses: actions/checkout@v2
-      - name: Set up JDK 1.8
-        uses: actions/setup-java@v1
-        with:
-          java-version: 1.8
-      - name: Build with Maven
-        run: mvn -B package --file pom.xml -Dmaven.test.skip=true
+    - uses: actions/checkout@v3
+    - name: Set up JDK 11
+      uses: actions/setup-java@v3
+      with:
+        java-version: '11'
+        distribution: 'temurin'
+        cache: maven
+    - name: Build with Maven
+      run: mvn verify
+    - name: Publish Test Report
+      if: ${{ always() }}
+      uses: scacap/action-surefire-report@v1
+    - name: notifications to teams Channel
+      run: java -jar SendTeamsNotifications.jar
+    - name: Get latest report
+      run: java -jar GetLatestReport.jar
+    - name: Read Properties
+      id: read_property
+      uses:  ashley-taylor/read-json-property-action@v1.0
+      with:
+        path: ./ExtentReports/TestReport.json
+        property: ReportName
+    - name: echo artifact
+      env:
+          REPORT_NAME: ${{ steps.read_property.outputs.value }}
+      run: | 
+          echo "$REPORT_NAME"
+    - name: Setup node
+      uses: actions/setup-node@v1
+    - name: Upload Extent report to GitHub Actions
+      uses: LasyIsLazy/github-upload-action@v0.1.0
+      with:
+        access-token: ${{ secrets.ACCESS_TOKEN }}
+        file-path: ${{ steps.read_property.outputs.value }}
+        owner: AzharuddinK
+        repo: Browserstack_CDL_POC
+        remote-dir: https://github.com/AzharuddinK/Browserstack_CDL_POC/tree/master/ExtentReports/
+   
