@@ -28,8 +28,12 @@ jobs:
       uses: scacap/action-surefire-report@v1
     - name: notifications to teams Channel
       run: java -jar D:\a\Browserstack_CDL_POC\Browserstack_CDL_POC\SendTeamsNotifications.jar
-    - name: Get Latest Report Name
+    - name: Read JSON
+    - id: set_var
       run: |
-          BUILD_NAME=java -jar GetLatestReport.jar
-          echo "$BUILD_NAME"
-
+          content=`cat ./ExtentReports/TestReport.json`
+          echo "::set-output name=TestReport::$content"
+    - name: Get Latest ReportName
+       run:|
+            echo "${{fromJson(steps.set_var.outputs.TestReport).ReportName}}"
+   
