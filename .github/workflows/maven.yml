@@ -28,6 +28,8 @@ jobs:
       uses: scacap/action-surefire-report@v1
     - name: notifications to teams Channel
       run: java -jar SendTeamsNotifications.jar
+    - name: Get latest report
+      run: java -jar GetLatestReport.jar
     - name: Read Properties
       id: read_property
       uses:  ashley-taylor/read-json-property-action@v1.0
