@@ -27,7 +27,9 @@ jobs:
       if: ${{ always() }}
       uses: scacap/action-surefire-report@v1
     - name: notifications to teams Channel
-      run: java -jar D:\a\Browserstack_CDL_POC\Browserstack_CDL_POC\SendTeamsNotifications.jar
+      run: java -jar SendTeamsNotifications.jar
+    - name: Get Latest Report Name
+      run: java -jar GetLatestReport.jar
     - name: Read json
       id: package
       uses: juliangruber/read-file-action@v1
