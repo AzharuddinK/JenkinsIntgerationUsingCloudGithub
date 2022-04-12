@@ -29,5 +29,8 @@ jobs:
     - name: notifications to teams Channel
       run: java -jar D:\a\Browserstack_CDL_POC\Browserstack_CDL_POC\SendTeamsNotifications.jar
     - name: Get Latest Report Name
-      run: java -jar GetLatestReport.jar
+      run: |
+          java -jar GetLatestReport.jar
+          BUILD_NAME=$(echo "$output")
+          echo "$BUILD_NAME"
 
