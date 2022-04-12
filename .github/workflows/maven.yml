@@ -50,5 +50,5 @@ jobs:
         file-path: ${{ steps.read_property.outputs.value }}
         owner: AzharuddinK
         repo: Browserstack_CDL_POC
-        remote-dir: https://github.com/AzharuddinK/Browserstack_CDL_POC.git/ExtentReports/
+        remote-dir: https://github.com/AzharuddinK/Browserstack_CDL_POC/tree/master/ExtentReports/
    
