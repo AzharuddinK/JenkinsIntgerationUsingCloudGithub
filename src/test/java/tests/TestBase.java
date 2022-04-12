@@ -46,13 +46,13 @@ public class TestBase {
 		System.out.println("Before Class");
 		ExtentTestManager.startTest(context.getAllTestMethods()[0].getInstance().getClass().getSimpleName());
 		page = new Pages(DriverManager.getDriver());
-		MyScreenRecorder.startRecording(context.getAllTestMethods()[0].getInstance().getClass().getSimpleName());
+		//MyScreenRecorder.startRecording(context.getAllTestMethods()[0].getInstance().getClass().getSimpleName());
 	}
 
 	@AfterTest(alwaysRun=true)
 	public void tearDown() throws Exception {
 		System.out.println("After All Tests");
-		MyScreenRecorder.stopRecording();
+		//MyScreenRecorder.stopRecording();
 		DriverManager.getDriver().quit(); 
 		ExtentTestManager.getTest().log(LogStatus.INFO,"Closed Session.");
 		ExtentTestManager.endTest();
