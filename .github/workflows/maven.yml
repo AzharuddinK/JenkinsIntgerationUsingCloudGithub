@@ -36,5 +36,16 @@ jobs:
       with:
         path: "./ExtentReports/TestReport.json"
     - name: File contents
-      run: echo "${ steps.read_file.outputs.contents }"
+      run: |
+          echo "${ steps.read_file.outputs.contents.ReportName}"
+          echo "reading a json file"
+          less ./ExtentReports/TestReport.json
+          set -e false
+          pwd 
+          ls -lrt
+          sudo chmod 0755 ./ExtentReports/TestReport.json
+          output=$(less ./ExtentReports/TestReport.json)
+          BUILD_NAME=$(echo "$output" | jq -r '.ReportName')       
+          echo "Reading the name"
+          echo "$BUILD_NAME" 
    
