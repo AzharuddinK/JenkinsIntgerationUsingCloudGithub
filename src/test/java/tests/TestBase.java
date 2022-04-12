@@ -60,6 +60,7 @@ public class TestBase {
 
 	@AfterSuite
 	public void publishreport() {
+		System.out.println("Publish report");
 		ExtentTestManager.publishReport();
 		//System.out.println(sessionId.toString());//update test result to cloud[Browserstack]
 		// some other activities
