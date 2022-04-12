@@ -35,8 +35,11 @@ jobs:
       uses: andstor/file-reader-action@v1
       with:
         path: "./ExtentReports/TestReport.json"
-    - name: File contents
-      run: |
-           BUILD_NAME = echo "${ steps.read_file.outputs.contents.ReportName}"
-           echo "$BUILD_NAME" 
+    - name: Extract version from package.json
+      uses: sergeysova/jq-action@v2
+      id: version
+      with:
+        cmd: 'jq .ReportName ./ExtentReports/TestReport.json -r'
+    - name: Show my version
+      run: 'echo "version ${{ steps.version.outputs.value }}"'
    
