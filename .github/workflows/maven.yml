@@ -3,6 +3,8 @@
 
 name: Runnig Tests to check extent report
 on:
+    push:
+        branches: [ master ]
     pull_request:
         branches: [ master ]
 
@@ -50,4 +52,3 @@ jobs:
         repo: Browserstack_CDL_POC
         branch-name: master
         remote-dir: ./
-   
