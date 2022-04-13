@@ -48,7 +48,6 @@ jobs:
       with:
         source_file: ./ExtentReports/${{ steps.read_property.outputs.value }}
         destination_repo: 'AzharuddinK/REPORT'
-        destination_branch_create: main
         destination_folder: 'test-dir'
         user_email: 'azharuddin.khan@se.com'
         user_name: 'AzharuddinK'
