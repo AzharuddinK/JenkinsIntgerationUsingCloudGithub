@@ -36,7 +36,7 @@ jobs:
       with:
         path: ./ExtentReports/TestReport.json
         property: ReportName
-    - name: echo artifact
+    - name: echo artifacts
       env:
           REPORT_NAME: ${{ steps.read_property.outputs.value }}
       run: | 
