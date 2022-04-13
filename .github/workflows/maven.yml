@@ -51,5 +51,5 @@ jobs:
         destination_folder: 'test-dir'
         user_email: 'azharuddin.khan@se.com'
         user_name: 'AzharuddinK'
-        commit_message: 'A custom message for the commit'
+        commit_message: 'Uploading Reports test-dir'
 
