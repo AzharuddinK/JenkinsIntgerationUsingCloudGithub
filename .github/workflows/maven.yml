@@ -11,7 +11,7 @@ on:
 jobs:
   build:
 
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v3
@@ -41,28 +41,4 @@ jobs:
           REPORT_NAME: ${{ steps.read_property.outputs.value }}
       run: | 
           echo "$REPORT_NAME"
-    - name: Pushes to another repository
-      uses: cpina/github-action-push-to-another-repository@main
-      env:
-          API_TOKEN_GITHUB: ${{ secrets.GITHUB_TOKEN }}
-      with:
-          source-directory: './ExtentReports/'
-          destination-github-username: 'AzharuddinK'
-          destination-repository-name: 'test1'
-          user-email: azharuddin.khan@se.com
-          target-branch: main
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - name: Pushes to another repository
-      uses: cpina/github-action-push-to-another-repository@main
-      env:
-          API_TOKEN_GITHUB: ${{ secrets.GITHUB_TOKEN }}
-      with:
-          source-directory: './ExtentReports/'
-          destination-github-username: 'AzharuddinK'
-          destination-repository-name: 'test1'
-          user-email: azharuddin.khan@se.com
-          target-branch: main
 
