@@ -41,7 +41,7 @@ jobs:
           REPORT_NAME: ${{ steps.read_property.outputs.value }}
       run: | 
           echo "$REPORT_NAME"
-    - name: Pushes Report file
+    - name: Pushes Extent Report file to other repo
       uses: dmnemec/copy_file_to_another_repo_action@main
       env:
         API_TOKEN_GITHUB: ${{ secrets.GITHUB_TOKEN }}
