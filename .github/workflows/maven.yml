@@ -46,7 +46,7 @@ jobs:
       env:
         API_TOKEN_GITHUB: ${{ secrets.GITHUB_TOKEN }}
       with:
-        source_file: ${{ steps.read_property.outputs.value }}
+        source_file: ./ExtentReports/${{ steps.read_property.outputs.value }}
         destination_repo: 'AzharuddinK/TAF'
         destination_folder: 'test-dir'
         user_email: 'azharuddin.khan@se.com'
