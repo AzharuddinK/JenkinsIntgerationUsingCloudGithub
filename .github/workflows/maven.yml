@@ -41,3 +41,14 @@ jobs:
           REPORT_NAME: ${{ steps.read_property.outputs.value }}
       run: | 
           echo "$REPORT_NAME"
+    - name: Pushes test file
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source_file: ./ExtentReports/${{ steps.read_property.outputs.value }}
+        destination_repo: 'AzharuddinK/test1'
+        destination_folder: 'test-dir'
+        user_email: 'azharuddin.khan@se.com'
+        user_name: 'AzharuddinK'
+        commit_message: 'A custom message for the commit'
