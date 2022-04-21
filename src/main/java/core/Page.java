@@ -12,7 +12,7 @@ public class Page {
 	  public RemoteWebDriver driver;
 	    public WebDriverWait wait;
 	    public ExtentTest test;
-	    //Constructor
+	    //Constructors
 	    public Page(RemoteWebDriver driver){
 	        this.driver = driver;
 	        PageFactory.initElements(driver, this); 
